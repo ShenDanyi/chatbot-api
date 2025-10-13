@@ -35,7 +35,7 @@ public class ZsxqApi implements IZsxqApi {
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 
         // 2️⃣ 创建一个 GET 请求对象，指定请求 URI（获取群组话题）
-        HttpGet get = new HttpGet("https://api.zsxq.com/v2/groups/"+ groupId +"/topics?scope=all&count=3");
+        HttpGet get = new HttpGet("https://api.zsxq.com/v2/groups/"+ groupId +"/topics?scope=all&count=20");
 
         // 3️⃣ 添加请求头 - cookie：用于携带登录信息（访问受保护的接口）
         get.addHeader("cookie",cookie);
