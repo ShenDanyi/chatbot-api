@@ -24,7 +24,7 @@ public class ApiTest {
         HttpGet get = new HttpGet("https://api.zsxq.com/v2/groups/28885518425541/topics?scope=all&count=1");
 
         // 3️⃣ 添加请求头 - cookie：用于携带登录信息（访问受保护的接口）
-        get.addHeader("cookie","zsxq_access_token=7BB17750-B8D2-48C2-A3ED-9F03F4AC337C_D8F3C3F6DC43738B; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22412455542181828%22%2C%22first_id%22%3A%22195b75c9beab30-0eb0131a7a58a28-4c657b58-1821369-195b75c9beb1fe%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTk1Yjc1YzliZWFiMzAtMGViMDEzMWE3YTU4YTI4LTRjNjU3YjU4LTE4MjEzNjktMTk1Yjc1YzliZWIxZmUiLCIkaWRlbnRpdHlfbG9naW5faWQiOiI0MTI0NTU1NDIxODE4MjgifQ%3D%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%24identity_login_id%22%2C%22value%22%3A%22412455542181828%22%7D%2C%22%24device_id%22%3A%22195b75c9beab30-0eb0131a7a58a28-4c657b58-1821369-195b75c9beb1fe%22%7D; abtest_env=product");
+        get.addHeader("cookie","sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22412455542181828%22%2C%22first_id%22%3A%22195b75c9beab30-0eb0131a7a58a28-4c657b58-1821369-195b75c9beb1fe%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTk1Yjc1YzliZWFiMzAtMGViMDEzMWE3YTU4YTI4LTRjNjU3YjU4LTE4MjEzNjktMTk1Yjc1YzliZWIxZmUiLCIkaWRlbnRpdHlfbG9naW5faWQiOiI0MTI0NTU1NDIxODE4MjgifQ%3D%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%24identity_login_id%22%2C%22value%22%3A%22412455542181828%22%7D%2C%22%24device_id%22%3A%22195b75c9beab30-0eb0131a7a58a28-4c657b58-1821369-195b75c9beb1fe%22%7D; abtest_env=product; zsxq_access_token=CFB10FC9-1F9F-41AD-BE96-FD9A13E4532B_D8F3C3F6DC43738B");
 
         // 4️⃣ 添加请求头 - Content-Type：告诉服务器请求的数据格式是 JSON
         get.addHeader("Content-Type","application/json; charset=UTF-8");
@@ -51,7 +51,7 @@ public class ApiTest {
 
         HttpPost post = new HttpPost("https://api.zsxq.com/v2/topics/82811584258221282/comments");
         // 3️⃣ 添加请求头 - cookie：用于携带登录信息（访问受保护的接口）
-        post.addHeader("cookie","zsxq_access_token=7BB17750-B8D2-48C2-A3ED-9F03F4AC337C_D8F3C3F6DC43738B; sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22412455542181828%22%2C%22first_id%22%3A%22195b75c9beab30-0eb0131a7a58a28-4c657b58-1821369-195b75c9beb1fe%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTk1Yjc1YzliZWFiMzAtMGViMDEzMWE3YTU4YTI4LTRjNjU3YjU4LTE4MjEzNjktMTk1Yjc1YzliZWIxZmUiLCIkaWRlbnRpdHlfbG9naW5faWQiOiI0MTI0NTU1NDIxODE4MjgifQ%3D%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%24identity_login_id%22%2C%22value%22%3A%22412455542181828%22%7D%2C%22%24device_id%22%3A%22195b75c9beab30-0eb0131a7a58a28-4c657b58-1821369-195b75c9beb1fe%22%7D; abtest_env=product");
+        post.addHeader("cookie","sensorsdata2015jssdkcross=%7B%22distinct_id%22%3A%22412455542181828%22%2C%22first_id%22%3A%22195b75c9beab30-0eb0131a7a58a28-4c657b58-1821369-195b75c9beb1fe%22%2C%22props%22%3A%7B%22%24latest_traffic_source_type%22%3A%22%E7%9B%B4%E6%8E%A5%E6%B5%81%E9%87%8F%22%2C%22%24latest_search_keyword%22%3A%22%E6%9C%AA%E5%8F%96%E5%88%B0%E5%80%BC_%E7%9B%B4%E6%8E%A5%E6%89%93%E5%BC%80%22%2C%22%24latest_referrer%22%3A%22%22%7D%2C%22identities%22%3A%22eyIkaWRlbnRpdHlfY29va2llX2lkIjoiMTk1Yjc1YzliZWFiMzAtMGViMDEzMWE3YTU4YTI4LTRjNjU3YjU4LTE4MjEzNjktMTk1Yjc1YzliZWIxZmUiLCIkaWRlbnRpdHlfbG9naW5faWQiOiI0MTI0NTU1NDIxODE4MjgifQ%3D%3D%22%2C%22history_login_id%22%3A%7B%22name%22%3A%22%24identity_login_id%22%2C%22value%22%3A%22412455542181828%22%7D%2C%22%24device_id%22%3A%22195b75c9beab30-0eb0131a7a58a28-4c657b58-1821369-195b75c9beb1fe%22%7D; abtest_env=product; zsxq_access_token=CFB10FC9-1F9F-41AD-BE96-FD9A13E4532B_D8F3C3F6DC43738B");
         // 4️⃣ 添加请求头 - Content-Type：告诉服务器请求的数据格式是 JSON
         post.addHeader("Content-Type","application/json; charset=UTF-8");
 
@@ -88,7 +88,7 @@ public class ApiTest {
 
         HttpPost post = new HttpPost("https://apis.itedus.cn/v1/chat/completions");
         post.addHeader("Content-Type","application/json");
-        post.addHeader("Authorization","Bearer sk-SlwIrc2wZuRr7ICSA52461F2Af6148E295A3EfF3D2BdD684");
+        post.addHeader("Authorization","Bearer sk-I73kVExzjCiFdK6z002480A3Fd8a4113Bb85432f096628Af");
 
         String paramJson = "{\n" +
                 "  \"model\": \"gpt-4o\",\n" +

@@ -39,7 +39,7 @@ public class ChatbotSchedule {
     private IOpenAI openAI;
 
     //cron = "0 */1 * * * *"每一分钟，"0/5 * * * * ?"每五秒。表达式网站：cron.qqe2.com
-    @Scheduled(cron = "0/5 * * * * ?")
+    @Scheduled(cron = "0/15 * * * * ?")
     public void run() {
         try {
             // 随机打烊，避免风控
@@ -51,7 +51,7 @@ public class ChatbotSchedule {
             // 不在营业范围--->打烊
             GregorianCalendar calendar = new GregorianCalendar();
             int hour = calendar.get(Calendar.HOUR_OF_DAY);
-            if(hour>22||hour<3){
+            if(hour>23||hour<3){
                 logger.info("打样时间不工作，AI下班了");
                 return;
             }
