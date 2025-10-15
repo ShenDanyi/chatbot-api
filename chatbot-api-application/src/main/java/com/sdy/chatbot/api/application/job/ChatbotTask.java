@@ -26,17 +26,16 @@ public class ChatbotTask implements Runnable {
     private String groupName;
     private String groupId;
     private String cookie;
-    private String openAiKey;
-    private boolean silenced;
+    private String openAIKey;
 
     private IZsxqApi zsxqApi;
     private IOpenAI openAI;
 
-    public ChatbotTask(String groupName, String groupId, String cookie, String openAiKey, IZsxqApi zsxqApi, IOpenAI openAI) {
+    public ChatbotTask(String groupName, String groupId, String cookie, String openAIKey, IZsxqApi zsxqApi, IOpenAI openAI) {
         this.groupName = groupName;
         this.groupId = groupId;
         this.cookie = cookie;
-        this.openAiKey = openAiKey;
+        this.openAIKey = openAIKey;
         this.zsxqApi = zsxqApi;
         this.openAI = openAI;
     }
@@ -69,7 +68,7 @@ public class ChatbotTask implements Runnable {
             // 2.AI回答
             for(Topics topic: topics){
                 String text = topic.getTalk().getText();
-                String answer = openAI.doChatGPT(text).trim();
+                String answer = openAI.doChatGPT(openAIKey, text).trim();
 
                 // 3.问题回复
                 String userId = topic.getTalk().getOwner().getUser_id();
