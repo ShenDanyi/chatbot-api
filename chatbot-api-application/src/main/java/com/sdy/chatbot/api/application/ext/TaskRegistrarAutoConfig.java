@@ -63,13 +63,12 @@ public class TaskRegistrarAutoConfig implements EnvironmentAware, SchedulingConf
             String groupName = taskGroup.get("groupName").toString();
             String groupId = taskGroup.get("groupId").toString();
             String cookie = taskGroup.get("cookie").toString();
-            String openAiKey = taskGroup.get("openAiKey").toString();
+            String openAIKey = taskGroup.get("openAIKey").toString();
             String cronExpressionBase64 = taskGroup.get("cronExpression").toString();
             String cronExpression = new String(Base64.getDecoder().decode(cronExpressionBase64), StandardCharsets.UTF_8);
-            boolean silenced = Boolean.parseBoolean(taskGroup.get("silenced").toString());
             logger.info("创建任务 groupName：{} groupId：{} cronExpression：{}", groupName, groupId, cronExpression);
             // 添加任务
-            taskRegistrar.addCronTask(new ChatbotTask(groupName, groupId, cookie, openAiKey, zsxqApi, openAI), cronExpression);
+            taskRegistrar.addCronTask(new ChatbotTask(groupName, groupId, cookie, openAIKey, zsxqApi, openAI), cronExpression);
         }
     }
 
