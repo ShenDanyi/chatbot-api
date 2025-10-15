@@ -51,7 +51,7 @@ public class ChatbotSchedule {
             // 不在营业范围--->打烊
             GregorianCalendar calendar = new GregorianCalendar();
             int hour = calendar.get(Calendar.HOUR_OF_DAY);
-            if(hour>23||hour<3){
+            if(hour>23||hour<1){
                 logger.info("打样时间不工作，AI下班了");
                 return;
             }
