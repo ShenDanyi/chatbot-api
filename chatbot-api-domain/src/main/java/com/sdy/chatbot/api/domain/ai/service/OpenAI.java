@@ -25,11 +25,8 @@ public class OpenAI implements IOpenAI {
 
     private Logger logger = LoggerFactory.getLogger(OpenAI.class);
 
-    @Value("${chatbot-api.openAIKey}")
-    private String openAIKey;
-
     @Override
-    public String doChatGPT(String question) throws IOException {
+    public String doChatGPT(String openAIKey,String question) throws IOException {
         // 1️⃣ 创建一个可关闭的 HttpClient 实例，用于发送 HTTP 请求
         CloseableHttpClient httpClient = HttpClientBuilder.create().build();
 

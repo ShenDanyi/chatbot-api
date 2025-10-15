@@ -5,5 +5,5 @@ import java.io.IOException;
 // ChatGPT open ai 接口
 public interface IOpenAI {
 
-    String doChatGPT(String question) throws IOException;
+    String doChatGPT(String openAIKey,String question) throws IOException;
 }
