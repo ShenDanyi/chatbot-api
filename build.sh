@@ -1,1 +1,1 @@
- docker build -f ./Dockerfile -t chatbot-api:1.0 .
+docker build -t shendanyi/chatbot-ai:1.0 -f ./Dockerfile .

@@ -39,7 +39,7 @@ public class ChatbotSchedule {
     private IOpenAI openAI;
 
     //cron = "0 */1 * * * *"每一分钟，"0/5 * * * * ?"每五秒。表达式网站：cron.qqe2.com
-    @Scheduled(cron = "0/15 * * * * ?")
+    @Scheduled(cron = "0/50 * * * * ?")
     public void run() {
         try {
             // 随机打烊，避免风控
