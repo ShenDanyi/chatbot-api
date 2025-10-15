@@ -1,7 +1,8 @@
 package com.sdy.chatbot.api.application.ext;
 
+import com.sdy.ai.common.PropertyUtil;
 import com.sdy.chatbot.api.application.job.ChatbotTask;
-import com.sdy.chatbot.api.common.PropertyUtil;
+
 import com.sdy.chatbot.api.domain.ai.IOpenAI;
 import com.sdy.chatbot.api.domain.zsxq.IZsxqApi;
 import org.apache.commons.lang3.StringUtils;
@@ -14,7 +15,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.scheduling.annotation.SchedulingConfigurer;
 import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 
-import javax.annotation.Resource;
+import jakarta.annotation.Resource;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 import java.util.HashMap;
